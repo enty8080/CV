@@ -1,0 +1,213 @@
+%-------------------------
+% Ivan Nikolskiy — CV
+% Faithful reproduction of original style
+% Compile with: xelatex cv.tex
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[top=0.45in, bottom=0.45in, left=0.75in, right=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{tabto}
+\usepackage{fontspec}
+\usepackage{microtype}
+
+% Helvetica Neue — same font family as the original
+\setmainfont{Helvetica Neue}[
+  BoldFont       = {Helvetica Neue Bold},
+  ItalicFont     = {Helvetica Neue Italic},
+  BoldItalicFont = {Helvetica Neue Bold Italic}
+]
+
+% Clickable links, underlined in black
+\hypersetup{colorlinks=false, pdfborderstyle={/S/U/W 0.5}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0pt}
+
+% Section headers: bold all-caps with solid rule underneath
+\titleformat{\section}
+  {\vspace{4pt}\bfseries\normalsize}
+  {}{0em}{\MakeUppercase}
+  [\vspace{2pt}\hrule height 0.6pt\vspace{4pt}]
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+
+% Large filled bullet matching original (SymbolMT-style)
+\setlist[itemize,1]{label={\large\textbullet}, leftmargin=1.8em, itemsep=3pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\fontsize{20}{24}\selectfont\textbf{Ivan Nikolskiy}}\\[4pt]
+  {\small Carlow, Ireland}\\[4pt]
+  \small
+  \href{mailto:enty8080@gmail.com}{\underline{enty8080@gmail.com}} / +353 083 894 7134
+  \hfill
+  \href{https://github.com/enty8080}{\underline{github.com/enty8080}}
+  \quad
+  \href{https://linkedin.com/in/ivan-nikolskiy}{\underline{linkedin.com/in/ivan-nikolskiy}}
+\end{center}
+
+\vspace{2pt}
+
+%----------PROFILE----------
+\section{Profile}
+\begin{itemize}
+  \item 3rd-year Computer Security student, \textbf{experienced in penetration testing software development and penetration testing}.
+  \item \textbf{6+ year experience} on \href{https://github.com/enty8080}{\underline{GitHub}} and \textbf{5.000+} stars on personal projects.
+  \item CTF player, \textbf{won biggest Irish ZeroDays CTF twice} in 2024 and 2025.
+  \item \textbf{PATCH 2025 Alumni,} developed social network for students -- \href{https://github.com/enty8080}{\underline{Cohort}}.
+\end{itemize}
+
+%----------KEY SKILLS----------
+\section{Key Skills}
+\begin{itemize}[itemsep=2pt]
+  \item \begin{tabular}[t]{@{}p{4.8cm}@{\hspace{0.3cm}}p{10.5cm}@{}}
+    \textbf{Programming Languages}: & C, Python, x86/x64 Assembly, Objective-C, JavaScript (React).
+  \end{tabular}
+  \item \begin{tabular}[t]{@{}p{4.8cm}@{\hspace{0.3cm}}p{10.5cm}@{}}
+    \textbf{Security Skills}: & Web Application Security (RCE, XXE, SSTI, SQLi, XSS, CSRF), Reverse Engineering, iOS in-depth Security, Cryptography, 4 years of experience in CTFs, OIDC/Oauth2 stack.
+  \end{tabular}
+  \item \begin{tabular}[t]{@{}p{4.8cm}@{\hspace{0.3cm}}p{10.5cm}@{}}
+    \textbf{Penetration Testing}: & Kali Linux, MetaSploit, NMAP, XAMPP, WireShark, Python, IDA Pro, pwntools, BurpSuite, nmap, Volatility Framework.
+  \end{tabular}
+  \item \begin{tabular}[t]{@{}p{4.8cm}@{\hspace{0.3cm}}p{10.5cm}@{}}
+    \textbf{Server Infrastructure}: & Docker, Kubernetes (k3s), WireGuard, Postfix/Dovecot, AWS (EC2, ALB, SES, ECS, ECR, RDS, IAM).
+  \end{tabular}
+\end{itemize}
+
+%----------PROJECTS----------
+\section{Projects}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \textbf{\underline{Cohort}} & \textbf{Student Discovery Platform} & \textbf{Ongoing}
+\end{tabular*}
+\begin{itemize}[topsep=2pt]
+  \item Mobile application for students to find friends on campus based on shared experience and interests.
+  \item Developed using Capacitor/React for frontend and Django for backend.
+  \item \textbf{Technologies}: Python (Django), JavaScript (React/Capacitor).
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \href{https://github.com/entysec/hatsploit}{\textbf{\underline{HatSploit Framework}}} & \textbf{Modular Penetration Testing Platform} & \textbf{Ongoing / 300+ Stars}
+\end{tabular*}
+\begin{itemize}[topsep=2pt]
+  \item Independently developing an extensive CLI for automation and simplification of penetration testing.
+  \item Utilizing C \& Assembly for providing a wide range of payloads that can be used within the framework.
+  \item \textbf{Technologies}: Python, C, Assembly, Penetration Testing.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \href{https://github.com/entysec/seashell}{\textbf{\underline{SeaShell Framework}}} & \textbf{iOS Remote Access / Post-Exploitation} & \textbf{Ongoing / 600+ Stars}
+\end{tabular*}
+\begin{itemize}[topsep=2pt]
+  \item Independent vulnerability research, use of CoreTrust bug in iOS 14/15/16 for exploitation.
+  \item Development of C implant for remotely controlling device and accessing Photos/SMS/VoiceMail and other user data.
+  \item \textbf{Technologies}: Python, C, Objective-C, iOS in-depth security.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \href{https://github.com/entysec/ghost}{\textbf{\underline{Ghost Framework}}} & \textbf{Android Remote Access / Post-Exploitation} & \textbf{May 2022 / 3.1k+ Stars}
+\end{tabular*}
+\begin{itemize}[topsep=2pt]
+  \item Independently developed extensive CLI for automating Android post-exploitation by abusing ADB service.
+  \item \textbf{Technologies}: Python, Android Debug Bridge.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \href{https://github.com/entysec/pwny}{\textbf{\underline{Pwny Implant}}} & \textbf{Advanced Remote Access Implant} & \textbf{Ongoing / 80+ Stars}
+\end{tabular*}
+\begin{itemize}[topsep=2pt]
+  \item Independently developed extensive C implant for automating data exfiltration, complete system access, persistence and other RedTeam tasks.
+  \item Large project written in pure C and designed for portability and extensibility, user-friendly CLI and API written in Python.
+  \item Implemented various communication methods between control server and implant including RSA encrypted TCP and HTTP tunnels.
+  \item \textbf{Technologies}: C, Python, RSA Cryptography, x86/64 Assembly.
+\end{itemize}
+
+\vspace{2pt}
+\textit{More projects available on my \href{https://github.com/enty8080}{\underline{GitHub}}}
+
+%----------EDUCATION----------
+\section{Education}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{\underline{South East Technological University (SETU)}} & Carlow, Ireland
+\end{tabular*}\\[2pt]
+\textit{Bachelor of Science (Honors) in Cyber Crime \& IT Security} \hfill September 2023 -- Present
+\begin{itemize}[topsep=2pt]
+  \item \textbf{Expected graduation}: May 2027
+  \item \textbf{Year 1 GPA}: 88\% | \textbf{Year 2 GPA}: 80\%
+  \item Member of the SETUSU Executive Class Representative Council (1+ years).
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{\underline{Moscow School of Programming}} & Moscow, Russian Federation
+\end{tabular*}\\[2pt]
+\textit{Software Development / Networking / Cyber Security} \hfill September 2019 -- May 2023
+\begin{itemize}[topsep=2pt]
+  \item Gained hands-on experience in cyber security and penetration testing though various CTF competitions.
+  \item Enhanced skills in team collaboration, project development, and problem-solving.
+  \item Learned networking \& switching basics as well as basics of boolean algebra.
+\end{itemize}
+
+%----------WORK EXPERIENCE----------
+\section{Work Experience}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{\underline{EntySec (entysec.com)}} & Russian Federation - Ireland
+\end{tabular*}\\[2pt]
+\textbf{(Self-Employed, Non-Profit)} \textit{Founder, Software Developer \& Security Researcher} \hfill July 2020 -- Present
+\begin{itemize}[topsep=2pt]
+  \item Developed several (13) open-source projects intended for providing cybersecurity solutions, penetration testing tools and toolkits for RedTeams, exploits and payloads. Posted them on EntySec's GitHub.
+  \item Released some products like HatSploit Framework, SeaShell Framework and Ghost Framework, well known in Android security community.
+\end{itemize}
+
+%----------ACHIEVEMENTS----------
+\section{Achievements, Activities and Interests}
+
+\begin{itemize}[itemsep=5pt]
+  \item \textbf{PATCH 2025} (2025)\tabto{8.5cm}Participated in Patch accelerator in Dublin, developed Cohort, an app for students to discover friends on campus based on shared interests and experience.
+  \item \textbf{ZeroDays CTF} (2024, 2025)\tabto{8.5cm}Participated in the competition with CTF team Loki in 2024 and 2025 and we won 1st place twice in a row.
+  \item \textbf{PHDays 11 / Offzone 2022 Conferences} (2022)\tabto{8.5cm}Presented my own security software and solutions including HatSploit Framework to describe new methods of penetration testing.
+  \item \textbf{MIREA Cyberbethlon CTF} (2021, 2022)\tabto{8.5cm}Participated in the competition with my CTF team ShadowLegacy in 2021 and 2022 and we won 1st place twice.
+\end{itemize}
+
+%----------REFERENCES----------
+\section{References}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \textbf{Patrick Walsh} & \textbf{Dogpatch Labs} & \textbf{CEO} \\
+  \href{mailto:patrick@dogpatchlabs.com}{\underline{patrick@dogpatchlabs.com}} & & +353 87 616 5526 \\[4pt]
+  \textbf{Tim Farrelly} & \textbf{Patch 2025 / Field of Vision} & \textbf{Program Director / CEO} \\
+  \href{mailto:timf34@gmail.com}{\underline{timf34@gmail.com}} & & +353 83 455 1238 \\
+\end{tabular*}
+
+\end{document}
